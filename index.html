@@ -451,26 +451,35 @@
     section{padding:72px 0}
     h2{font-size:32px}
     .nav-links{
-      display:none;position:fixed;top:0;left:0;right:0;bottom:0;
-      background:rgba(10,22,40,0.98);
+      display:none;position:fixed;top:72px;left:0;right:0;
+      background:#0d1f3c;
+      border-bottom:1px solid #1E3A5F;
       flex-direction:column;gap:0;
-      justify-content:center;align-items:center;
-      z-index:99;backdrop-filter:blur(20px);
+      z-index:99;
+      padding:8px 0 16px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
     }
     .nav-links.open{display:flex}
-    .nav-links li{width:100%;text-align:center}
+    .nav-links li{width:100%;text-align:left}
     .nav-links li a{
-      display:block;padding:18px 24px;
-      font-size:20px;font-weight:600;color:#FFFFFF;
+      display:block;padding:13px 24px;
+      font-size:15px;font-weight:500;color:#CBD5E1;
       border:none!important;border-bottom:none!important;
       text-decoration:none;transition:color .2s;
     }
-    .nav-links li a:hover{color:#3B82F6}
+    .nav-links li a:hover{color:#3B82F6;background:rgba(255,255,255,0.04)}
     .nav-toggle{display:block;z-index:200;position:relative}
     nav .btn-primary{display:none}
-    .nav-links.open ~ * .nav-toggle span:nth-child(1){transform:translateY(10px) rotate(45deg)}
-    .nav-links.open ~ * .nav-toggle span:nth-child(2){opacity:0}
-    .nav-links.open ~ * .nav-toggle span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+    /* Dropdown inside mobile — show inline */
+    .nav-links.open .dropdown-menu{
+      display:block!important;position:static!important;
+      background:transparent!important;border:none!important;
+      box-shadow:none!important;padding:0!important;min-width:unset!important;
+    }
+    .nav-links.open .dropdown-menu a{
+      padding:10px 24px 10px 36px!important;font-size:14px!important;color:#94A3B8!important;
+    }
+    .nav-links.open .dropdown-menu a:hover{color:#3B82F6!important}
     .hero{padding:130px 0 60px}
     .hero-stats{grid-template-columns:repeat(2,1fr)}
     .stat{border-right:none;border-bottom:1px solid #1E3A5F}
