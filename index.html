@@ -523,30 +523,31 @@
 <!-- ============ NAV ============ -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">Lead<span>Evolution</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li class="nav-dropdown"><a href="#verticals">Industries <span class="dd-chevron">▾</span></a>
-        <div class="dropdown-menu">
-          <a href="verticals/mortgage-broker-leads.html">🏠 Mortgage Broker Leads</a>
-          <a href="verticals/financial-planning-leads.html">📊 Financial Planning Leads</a>
-          <a href="verticals/solar-leads.html">☀️ Solar Installation Leads</a>
-          <a href="verticals/insurance-leads.html">🛡️ Insurance Broker Leads</a>
-          <a href="verticals/energy-leads.html">⚡ Energy Broker Leads</a>
-          <a href="verticals/commercial-finance-leads.html">🏢 Commercial Finance Leads</a>
-        </div>
-      </li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#integrations">Integrations</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="https://calendly.com/jordan-leadevolution/30min" class="btn btn-primary">Book a Capacity Audit</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="index.html" class="nav-logo">Lead<span>Evolution</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="dropdown"><span class="nav-link">Verticals ▾</span><div class="dropdown-menu"><a href="verticals/mortgage-broker-leads.html" class="dropdown-item">🏠 Mortgage Broker Leads</a><a href="verticals/financial-planning-leads.html" class="dropdown-item">📊 Financial Planning Leads</a><a href="verticals/solar-leads.html" class="dropdown-item">☀️ Solar Leads</a><a href="verticals/insurance-leads.html" class="dropdown-item">🛡️ Insurance Broker Leads</a><a href="verticals/energy-leads.html" class="dropdown-item">⚡ Energy Broker Leads</a><a href="verticals/commercial-finance-leads.html" class="dropdown-item">🏢 Commercial Finance Leads</a></div></div>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="team.html" class="nav-link">Our Team</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="https://calendly.com/jordan-leadevolution/30min" target="_blank" class="nav-link nav-cta">Book Free Audit →</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="mobile-link">Home</a>
+  <a href="verticals/mortgage-broker-leads.html" class="mobile-link">🏠 Mortgage Broker Leads</a>
+  <a href="verticals/financial-planning-leads.html" class="mobile-link">📊 Financial Planning Leads</a>
+  <a href="verticals/solar-leads.html" class="mobile-link">☀️ Solar Leads</a>
+  <a href="verticals/insurance-leads.html" class="mobile-link">🛡️ Insurance Broker Leads</a>
+  <a href="verticals/energy-leads.html" class="mobile-link">⚡ Energy Broker Leads</a>
+  <a href="verticals/commercial-finance-leads.html" class="mobile-link">🏢 Commercial Finance Leads</a>
+  <a href="faq.html" class="mobile-link">FAQ</a>
+  <a href="team.html" class="mobile-link">Our Team</a>
+  <a href="contact.html" class="mobile-link">Contact</a>
+  <a href="https://calendly.com/jordan-leadevolution/30min" target="_blank" class="mobile-cta">Book Free Audit →</a>
+</div>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
@@ -938,12 +939,6 @@
 </footer>
 
 <script>
-  // ============ NAV TOGGLE ============
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
   // ============ FAQ ACCORDION ============
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
